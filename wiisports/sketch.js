@@ -66,6 +66,8 @@ let golfsince = -1;
 let icon;
 let breakimg;
 
+let prevHome = false;
+
 let file;
 
 function preload() {
@@ -483,6 +485,10 @@ function draw() {
   }
   prevX = mouseX;
   prevY = mouseY;
+  if (keyIsDown(36) && !prevHome) {
+     homemenu = !homemenu
+  }
+  prevHome = keyIsDown(36);
 }
 
 
@@ -519,6 +525,8 @@ function mousePressed() {
   }
 }
 
+
+
 function keyPressed() {
    if (key == 'a' || key == 'A') {
      AB[0] = true;
@@ -526,9 +534,6 @@ function keyPressed() {
    if (key == 'b' || key == 'B') {
      AB[1] = true;
    }
-    if (key == 'h' || key == 'H') {
-      homemenu = !homemenu;
-    }
     if (key == '+') {
       breakmenu = !breakmenu;
     }
