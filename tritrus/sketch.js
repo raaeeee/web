@@ -81,7 +81,7 @@ function preload() {
     }
   }
   maxlevel = getItem('levelstore')
-  if (highlevel === null) {
+  if (maxlevel === null) {
     maxlevel = 0;
   }
   tiles = loadImage("assets/tilefile5.png");
