@@ -583,6 +583,9 @@ function showMenu(ID) {
 }
 
 function gameover() {
+  if (level > maxlevel) {
+    maxlevel = level;
+  }
   var scoreRow = [score, level, rowcount];
   if (score > highscores[0][0]) {
     highscores[0] = scoreRow;
