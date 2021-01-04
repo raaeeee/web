@@ -69,6 +69,7 @@ let breakimg;
 let prevHome = false;
 
 let file;
+let cnv;
 
 function preload() {
   
@@ -95,7 +96,8 @@ function preload() {
 
 function setup() {
 
-  createCanvas(800, 620);
+  cnv = createCanvas(800, 620);
+  centerCanvas();
   //surface.setTitle("【ＷＩＩ　ＳＰＯＲＴＳ　ＦＯＲ　ＰＣ　（ＦＲＥＥ　ＤＯＷＮＬＯＡＤ】");
   //icon = loadImage("icon.png");
   //surface.setIcon(icon);
@@ -103,6 +105,15 @@ function setup() {
   ellipseMode(CORNERS);
   file.loop();
 
+}
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
+function windowResized() {
+	centerCanvas();
 }
 
 
