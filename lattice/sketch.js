@@ -16,11 +16,11 @@ function windowResized() {
   p2 = [];
   p3 = [];
   resizeCanvas(windowWidth, windowHeight);
-  for (let i = 0; i < width/30; i++) {
+  for (let i = 0; i <= width/30; i++) {
     p1[i] = [];
     p2[i] = [];
     p3[i] = [];
-    for (let j = 0; j < height/30; j++) {
+    for (let j = 0; j <= height/30; j++) {
       p1[i][j] = 0;
       p2[i][j] = 0;
       p3[i][j] = 0;
