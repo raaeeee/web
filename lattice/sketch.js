@@ -61,8 +61,8 @@ function draw() {
   } else {
     
   }
-  for (let i = 0; i < width/30-1; i++) {
-    for (let j = 0; j < height/30-1; j++) {
+  for (let i = 0; i < width/30; i++) {
+    for (let j = 0; j < height/30; j++) {
       showSquare(xOff+30*i, yOff+30*j, 30*sigmoid(p1[i][j]), atan2(p3[i][j], p2[i][j]));
     }
   }
